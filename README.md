@@ -13,7 +13,7 @@ Follow the link. [Link Text](https://young-mountain-86340-14a57acc94c8.herokuapp
 ## Usage
 
 
-![sample](assets/01-manifest.png)
+![sample](assets/Screenshot.png)
 
 
 
