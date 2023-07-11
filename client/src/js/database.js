@@ -17,7 +17,7 @@ export const putDb = async (content) => {console.log('putDb implemented');
   const jatedb = await openDB('jate', 1);//creates connection to database and proper version
   const tx = jatedb.transaction('jate', 'readwrite');//creates transaction
   const store = tx.objectStore('jate');//opens object store
-  await store.put(content);//adds content to object store
+  await store.put({id:1,value:content});//adds content to object store
   await tx.done;//closes transaction
   console.log('Data added to the database');
 };
@@ -29,6 +29,6 @@ export const getDb = async () => {console.log('getDb implemented');
   const store = tx.objectStore('jate');//opens object store
   const content = await store.getAll();//gets all content from object store
   await tx.done;//closes transaction
-  return content;
+  return content.value;//returns content
 };
 initdb();
